@@ -1,0 +1,98 @@
+body {
+    font-size: 120%;
+    font-family: "liberation_monoregular", Courier, monospace;
+    line-height: 2;
+    background-color: #00ade6;
+    color: #e6e6e6;
+    margin: 0;
+    padding: 2em 0;
+}
+
+a:link {
+    color: #e6e6e6;
+    text-decoration: none;
+    border-bottom: 1px solid #FFF;
+}
+
+a:visited {
+    color: #e6e6e6;
+    text-decoration: none;
+    border-bottom: 1px solid #FFF;
+}
+
+a:hover {
+    border-bottom: 1px solid #FFF;
+}
+
+a:visited:hover {
+    border-bottom: 1px solid #FFF;
+}
+
+#header {
+    padding-left: 48px;
+    margin-bottom: 2em;
+}
+
+#body {
+    padding: 0 48px;
+}
+
+h1 {
+    font-weight: normal;
+    font-size: 1em;
+    color: #fff;
+    margin-bottom: 0;
+}
+
+span.sub {
+    color: #e6e6e6;
+}
+
+h2 {
+    font-weight: normal;
+    font-size: 1em;
+    color: #fff;
+    margin-top: 2em;
+    margin-bottom: 0;
+}
+
+address {
+    font-style: normal;
+}
+
+#profile dt {
+    float: left;
+    color: #e6e6e6;
+}
+
+#profile dd {
+    margin-left: 5em;
+}
+
+#profile dd a:link,
+#profile dd a:visited {
+    color: #FFF;
+}
+
+#projects dt {
+    float: left;
+    margin-right: 1em;
+}
+
+#projects dd {
+    margin-left: 1em;
+}
+
+#projects dt a:link,
+#projects dt a:visited {
+    color: #FFF;
+}
+
+.note {
+    color: #445;
+}
+
+p.note {
+    margin: 0;
+}
+
