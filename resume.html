@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Adam Ringwood - Resume</title>
+<link href='https://fonts.googleapis.com/css?family=Ubuntu:300,400,700' rel='stylesheet' type='text/css' />
+<style type="text/css">
+body{
+	background-color: #222;
+	/* background image courtesy of subtlepatterns.com */
+	background-image: url(https://dan.hlavenka.me/linen.png);
+	color: #eee;
+	font-family: 'Ubuntu', Arial, Helvetica, sans-serif;
+}
+
+#wrapper{
+	max-width: 900px;
+	margin: 0 auto;
+}
+
+header{
+	position: relative;
+	background-color: #f8f8f8;
+	color: #333;
+	font-weight: 400;
+	text-align: center;
+	padding: 10px;
+}
+header .name{
+	margin: 0;
+	color: black;
+	font-weight: 700;
+	font-size: 250%;
+	line-height: 100%;
+}
+header .tagline{
+	font-style: italic;
+}
+header .address,
+header .contact{
+	line-height: 150%;
+}
+header .address{
+	position: absolute;
+	left: 10px;
+	text-align: left;
+}
+header .contact{
+	position: absolute;
+	right: 10px;
+	text-align: right;
+}
+
+#content{
+	background-color: white;
+	color: #111;
+	position: relative;
+	font-weight: 300;
+	line-height: 175%;
+	padding: 25px;
+}
+#content h3{
+	margin: 0 0 -1em 0;
+	text-decoration: underline;
+}
+#content section{
+	margin: 1.5em 0;
+}
+#content section .type{
+	font-size: 125%;
+}
+#content section .location:before{
+	content: ' - ';
+	color: #111;
+}
+#content section .location{
+	color: #333;
+}
+#content section .date{
+	float: right;
+}
+#content section .meta{
+	clear: both;
+	font-style: italic;
+	display: block;
+}
+#content section ul{
+	margin: .25em 0;
+	padding-left: 1.5em;
+}
+
+a{
+	color: #333;
+	text-decoration: none;
+	border-bottom: 1px solid rgba(128, 128, 128, .25);
+}
+a:hover{
+	color: #666;
+	border-bottom: 1px solid rgba(128, 128, 128, 1);
+}
+
+.clear{
+	clear: both;
+}
+.site-link{
+	display: none;
+}
+
+@media screen and (max-width: 700px){
+	header .name{
+		margin-top: 1.25em;
+	}
+}
+@media screen and (max-width: 500px){
+	#content section .date{
+		display: block;
+		float: unset;
+	}
+}
+
+@media print{
+	#wrapper{
+		width: 900px;
+	}
+	header{
+		border-bottom: 1px solid black;
+	}
+	.site-link{
+		display: block;
+		color: #666 !important;
+		position: fixed;
+		bottom: 0;
+		right: 0;
+	}
+	a{
+		/* Hide link underlines if printing to paper * /
+		border: none;
+		color: inherit;
+		/**/
+	}
+	#content{
+		padding: 25px 0 .125em 0;
+	}
+	#content section:last{
+		margin-bottom: 0;
+	}
+
+	@page{
+		size: portrait;
+	}
+}
+</style>
+	</head>
+<body>
+<div id="wrapper">
+	<header>
+    <div class="contact">
+      <a href="mailto:dan@hlavenka.me">job24@adam.ringwood.io</a>
+    </div>
+		<h1 class="name">Adam Ringwood</h1>
+		<div class="tagline">programmer + hacker</div>
+	</header>
+	<div id="content">
+		<h3>Experience</h3>
+		<section>
+			<span class="type">Cofounder/CTO</span>
+			<span class="date">2020-present</span>
+			<div class="meta">
+				<a href="https://skolem.com/" target="_blank">Skolem Technologies</a>
+				<span class="location">Chicago, IL</span>
+			</div>
+			<ul>
+				<li>Developed a OMS/PMS from scratch that executed 100+ million dollars of DeFi trades on Ethereum.</li>
+				<li>Lead development on double book accounting system, time series database, and many additional features.</li>
+				<li>Managed up to 12 engineers in building out additional products for customers.</li>
+				<li>Raised 20+ million dollars from Galaxy Digitial, Point 72, Jump Trading and others.</li>
+			</ul>
+		</section>
+		<section>
+			<span class="type">Senior Security Researcher</span>
+			<span class="date">Jun 2018 - Feb 2021</span>
+			<div class="meta">
+				<a href="https://www.elastic.co/" target="_blank">Elastic, acquired Endgame in 2019</a>
+				<span class="location">Chicago, IL</span>
+			</div>
+			<ul>
+				<li>Moved 100+ servers from a colo to a cloud native AWS setup</li>
+				<li>Managed a continous malware ingestion pipeline and ML data training set</li>
+				<li>Built custom tooling to successfully detonate binaries safely with custom introspection.</li>
+			</ul>
+		</section>
+		<section>
+			<span class="type">Security Researcher</span>
+			<span class="date">June 2017 - June 2018</span>
+			<div class="meta">
+				<a href="https://www.uptake.com/" target="_blank">Uptake</a>
+				<span class="location">Chicago, IL</span>
+			</div>
+			<ul>
+				<li>Developed a network security product to secure ICS networks.</li>
+				<li>Assisted in development of ML models for detecting SCADA attacks.</li>
+				<li>Developed custom tooling to provide monitoring and introspection for SCADA systems.</li>
+			</ul>
+		</section>
+		<section>
+			<span class="type">Machine Learning Researcher</span>
+			<span class="date">July 2013 - June 2015</span>
+			<div class="meta">
+				<a href="https://stevensoncenter.org/our-impact/workforce/" target="_blank">WDIA @ Illinois State University</a>
+				<span class="location">Normal, IL</span>
+			</div>
+			<ul>
+        <li>Implemented and created algorithms for record matching dirty multi-million record sets. Focus on rule-based, phonetic and machine learning processes.</li>
+			</ul>
+		</section>
+		<section>
+			<span class="meta">Additional internships at The Honest Company, Paypal/Braintree and Discover Financial Services</span>
+		</section>
+		<h3>Education</h3>
+		<section>
+			<div class="meta">
+				<a href="https://illinoisstate.edu/academics/computer-science-general/" target="_blank">Illinois State University</a>
+				<span class="location">Normal, IL</span>
+			</div>
+			<span class="date">2013 - 2017</span>
+			<ul>
+				<li>
+				  Ran Redbird Hacks in 2015 and 2016. A two day hackaton with over 100 student competing.
+				</li>
+				<li>
+					President  of information security club, helping run annual
+					<a href="https://it.illinoisstate.edu/student-life/cyber-defense-competition/" target="_blank">cyber defense competition</a>
+				</li>
+			</ul>
+		</section>
+
+		<h3>Recent Projects</h3>
+		<section>
+			<ul>
+				<li><a href="https://generating.art/picks" traget="_blank">generating.art</a> - Infinite feed of pen plotter art.</li>
+				<li><a href="https://omniscient.wiki">omniscient.wiki</a> - Online encyclopedia written by an LLM.</li>
+				<li><a href="https://hyxor.com">hyxor.com</a> - A battle royale game for programmers.</li>
+			</ul>
+		</section>
+		<div class="clear"></div>
+		<div class="site-link">https://ringwood.io/resume.html</div>
+	</div>
+</div>
+</body>
+</html>
