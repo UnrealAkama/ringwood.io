@@ -16,6 +16,7 @@ body{
 #wrapper{
 	max-width: 900px;
 	margin: 0 auto;
+	background-color: white;
 }
 
 header{
@@ -56,8 +57,8 @@ header .contact{
 	color: #111;
 	position: relative;
 	font-weight: 300;
-	line-height: 175%;
-	padding: 25px;
+	line-height: 140%;
+	padding: 15px;
 }
 #content h3{
 	margin: 0 0 -1em 0;
@@ -102,8 +103,35 @@ a:hover{
 .clear{
 	clear: both;
 }
+
 .site-link{
 	display: none;
+}
+
+#container {  
+  display: grid;
+  grid-template-columns: 0.65fr 0.35fr;
+  grid-template-rows: 1fr;
+  gap: px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "content sidebar";
+}
+
+#content { grid-area: content; }
+
+#sidebar { grid-area: sidebar; }
+
+.sidebar-item { 
+  padding: 0px;
+  padding-bottom: 8px;
+  margin: 0px;
+}
+
+.sidebar-link {
+  float: right;
+  width: 50%;
+  margin-right: 6px;
 }
 
 @media screen and (max-width: 700px){
@@ -148,104 +176,130 @@ a:hover{
 	@page{
 		size: portrait;
 	}
+
 }
 </style>
 	</head>
 <body>
 <div id="wrapper">
 	<header>
-    <div class="contact">
-      <a href="mailto:dan@hlavenka.me">job24@adam.ringwood.io</a>
-    </div>
 		<h1 class="name">Adam Ringwood</h1>
 		<div class="tagline">Software Engineer | Security Researcher</div>
 	</header>
-	<div id="content">
-		<h3>Experience</h3>
-		<section>
-			<span class="type">Cofounder/CTO</span>
-			<span class="date">November 2020 - Present</span>
-			<div class="meta">
-				<a href="https://skolem.com/" target="_blank">Skolem Technologies</a>
-				<span class="location">Chicago, IL</span>
-			</div>
-			<ul>
-				<li>Developed a OMS/PMS from scratch that executed 100+ million dollars of DeFi trades on Ethereum.</li>
-				<li>Managed up to 12 engineers in building out additional products for customers.</li>
-				<li>Built customer relationships and assisted the sales team in closing clients..</li>
-				<li>Lead development on double book accounting system, time series database, and many additional features.</li>
-				<li>Raised 20+ million dollars from Galaxy Digitial, Point 72, Jump Trading and others.</li>
-			</ul>
-		</section>
-		<section>
-			<span class="type">Senior Security Researcher</span>
-			<span class="date">Jun 2018 - Feb 2021</span>
-			<div class="meta">
-				<a href="https://www.elastic.co/" target="_blank">Elastic, acquired Endgame in 2019</a>
-				<span class="location">Chicago, IL</span>
-			</div>
-			<ul>
-				<li>Moved 100+ servers from a colo to a cloud native AWS setup</li>
-				<li>Managed a continous malware ingestion pipeline and ML data training set</li>
-				<li>Built custom tooling to successfully detonate binaries safely with custom introspection.</li>
-			</ul>
-		</section>
-		<section>
-			<span class="type">Security Researcher</span>
-			<span class="date">June 2017 - June 2018</span>
-			<div class="meta">
-				<a href="https://www.uptake.com/" target="_blank">Uptake</a>
-				<span class="location">Chicago, IL</span>
-			</div>
-			<ul>
-				<li>Developed a network security product to secure ICS networks.</li>
-				<li>Assisted in development of ML models for detecting SCADA attacks.</li>
-				<li>Developed custom tooling to provide monitoring and introspection for SCADA systems.</li>
-			</ul>
-		</section>
-		<section>
-			<span class="type">Machine Learning Researcher</span>
-			<span class="date">July 2013 - June 2015</span>
-			<div class="meta">
-				<a href="https://stevensoncenter.org/our-impact/workforce/" target="_blank">WDIA @ Illinois State University</a>
-				<span class="location">Normal, IL</span>
-			</div>
-			<ul>
-        <li>Implemented and created algorithms for record matching dirty multi-million record sets. Focus on rule-based, phonetic and machine learning processes.</li>
-			</ul>
-		</section>
-		<section>
-			<span class="meta">Additionally internships at The Honest Company (2016), Paypal/Braintree (2015) and Discover Financial Services (2014)</span>
-		</section>
-		<h3>Education</h3>
-		<section>
-			<div class="meta">
-				<a href="https://illinoisstate.edu/academics/computer-science-general/" target="_blank">Computer Science @ Illinois State University</a>
-				<span class="location">Normal, IL</span>
-			  <span class="date" style="font-style: normal;">2013 - 2017</span>
-			</div>
-			<ul>
-				<li>
-				  Ran RedbirdHacks in 2015 and 2016. A two day hackathon with over 100 students competing.
-				</li>
-				<li>
-					President of ISUSec, an information security club, helping run annual
-					<a href="https://it.illinoisstate.edu/student-life/cyber-defense-competition/" target="_blank">cyber defense competition</a>
-				</li>
-			</ul>
-		</section>
+  <div id="container">
+    <div id="content">
+      <h3>Experience</h3>
+      <section>
+        <span class="type">Cofounder/CTO</span>
+        <span class="date">November 2020 - Present</span>
+        <div class="meta">
+          <a href="https://skolem.com/" target="_blank">Skolem Technologies</a>
+          <span class="location">Chicago, IL</span>
+        </div>
+        <ul>
+          <li>Developed a OMS/PMS from scratch that executed over 150 million dollars of DeFi trades on Ethereum.</li>
+          <li>Hired and managed up to 12 engineers in building out additional products for customers.</li>
+          <li>Built customer relationships and assisted the sales team in closing clients.</li>
+          <li>Lead development on double book accounting system, time series database, node infratructure and many additional features.</li>
+          <li>Raised 20+ million dollars from Galaxy Digitial, Point 72, Jump Trading and others.</li>
+        </ul>
+      </section>
+      <section>
+        <span class="type">Senior Security Researcher</span>
+        <span class="date">Jun 2018 - Feb 2021</span>
+        <div class="meta">
+          <a href="https://www.elastic.co/" target="_blank">Elastic, acquired Endgame in 2019</a>
+          <span class="location">Chicago, IL</span>
+        </div>
+        <ul>
+          <li>Moved 100+ servers from a colo to a cloud native AWS setup</li>
+          <li>Managed a continous malware ingestion pipeline and ML data training set</li>
+          <li>Built custom tooling to successfully detonate binaries safely with custom introspection.</li>
+        </ul>
+      </section>
+      <section>
+        <span class="type">Security Researcher</span>
+        <span class="date">June 2017 - June 2018</span>
+        <div class="meta">
+          <a href="https://www.uptake.com/" target="_blank">Uptake</a>
+          <span class="location">Chicago, IL</span>
+        </div>
+        <ul>
+          <li>Developed a network security product to secure ICS networks.</li>
+          <li>Assisted in development of ML models for detecting SCADA attacks.</li>
+          <li>Developed custom tooling to provide monitoring and introspection for SCADA systems.</li>
+        </ul>
+      </section>
+      <section>
+        <span class="type">Machine Learning Researcher</span>
+        <span class="date">July 2013 - June 2015</span>
+        <div class="meta">
+          <a href="https://stevensoncenter.org/our-impact/workforce/" target="_blank">WDIA @ Illinois State University</a>
+          <span class="location">Normal, IL</span>
+        </div>
+        <ul>
+          <li>Implemented and created algorithms for record matching dirty multi-million record sets. Focus on rule-based, phonetic and machine learning processes.</li>
+        </ul>
+      </section>
+      <section>
+        <span class="meta">Additionally internships at The Honest Company (2016), Paypal/Braintree (2015) and Discover Financial Services (2014)</span>
+      </section>
+      <h3>Education</h3>
+      <section>
+        <div class="meta">
+          <a href="https://illinoisstate.edu/academics/computer-science-general/" target="_blank">Computer Science @ Illinois State University</a>
+          <span class="location">Normal, IL</span>
+          <span class="date" style="font-style: normal;">2013 - 2017</span>
+        </div>
+        <ul>
+          <li>
+            Ran RedbirdHacks in 2015 and 2016. A two day hackathon with over 100 students competing.
+          </li>
+          <li>
+            President of ISUSec, an information security club, helping run annual
+            <a href="https://it.illinoisstate.edu/student-life/cyber-defense-competition/" target="_blank">cyber defense competition</a> and weekly hour long lessons.
+          </li>
+        </ul>
+      </section>
 
-		<h3>Recent Projects</h3>
-		<section>
-			<ul>
-				<li><a href="https://generating.art/picks" traget="_blank">generating.art</a> - Infinite feed of pen plotter art.</li>
-				<li><a href="https://omniscient.wiki">omniscient.wiki</a> - Online encyclopedia written by an LLM.</li>
-				<li><a href="https://hyxor.com">hyxor.com</a> - A battle royale game for programmers.</li>
-			</ul>
-		</section>
-		<div class="clear"></div>
-		<div class="site-link">https://ringwood.io/resume.html</div>
-	</div>
+      <div class="clear"></div>
+      <div class="site-link">https://ringwood.io/resume.html</div>
+    </div>
+  <div id="sidebar">
+    <div id="content">
+      <h3>Links</h3>
+      <section>
+        <p class="sidebar-item">Mail: <a class="sidebar-link" href="mailto:job24@ringwood.io">job24@ringwood.io</a></p>
+        <p class="sidebar-item">Web: <a class="sidebar-link" href="https://ringwood.io">ringwood.io</a></p>
+        <p class="sidebar-item">Git: <a class="sidebar-link" href="https://github.com/UnrealAkama">github.com/akama</a></p>
+        <p class="sidebar-item">Blog: <a class="sidebar-link" href="https://binary.wtf">binary.wtf</a></p>
+      </section>
+      <h3>Recent Projects</h3>
+      <section>
+        <p class="sidebar-item"><a href="https://generating.art/picks" traget="_blank">generating.art</a><br>Infinite feed of pen plotter art.</p>
+        <p class="sidebar-item"><a href="https://omniscient.wiki">omniscient.wiki</a><br>Online encyclopedia written by an LLM.</p>
+        <p class="sidebar-item"><a href="https://hyxor.com">hyxor.com</a><br>A battle royale game for programmers.</p>
+      </section>
+      <h3>Previous Talks</h3>
+      <section>
+        <p class="sidebar-item"><a href="https://grrcon.com">GrrCON 2019</a><br>
+        Custom, robust AWS monitoring for cents a day using EQL</p>
+        <p class="sidebar-item"><a href="https://icfp19.sigplan.org/home/ocaml-2019">OCaml Workshop @ ICFP 2019</a><br>
+        Makecloud: Simple, Fast, Robust CI/CD for the modern era</p>
+        <p class="sidebar-item"><a href="https://www.rsaconference.com/">RSA 2018</a>
+        <br>SCADA 101</p>
+        <p class="sidebar-item"><a href="http://thotcon.org/">Thotcon 0x8</a>
+        <br>University Privacy: How to Doxx 60,000 Students</p>
+        <p class="sidebar-item"><a href="https://circlecitycon.com">Circle City Con</a>
+        <br>Creating a Successful Collegiate Security Club</p>
+        <p class="sidebar-item"><a href="https://www.derbycon.com/">Derbycon 4.0</a>
+        <br>Presenting distributed password cracking software.</p>
+        <p class="sidebar-item"><a href="http://thotcon.org/">Thotcon 0x5</a>
+        <br>Presenting open source email phishing tool.</p>
+      </section>
+    </div>
+  </div>
+  </div>
 </div>
 </body>
 </html>
