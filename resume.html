@@ -6,121 +6,113 @@
 <link href='https://fonts.googleapis.com/css?family=Ubuntu:300,400,700' rel='stylesheet' type='text/css' />
 <style type="text/css">
 body{
-	background-color: #222;
-	/* background image courtesy of subtlepatterns.com */
-	background-image: url(https://ringwood.io/files/linen.png);
-	color: #eee;
-	font-family: 'Ubuntu', Arial, Helvetica, sans-serif;
+  background-color: #222;
+  /* background image courtesy of subtlepatterns.com */
+  background-image: url(https://ringwood.io/files/linen.png);
+  font-family: 'Ubuntu', Arial, Helvetica, sans-serif;
+  font-weight: 300;
+  color: #111;
 }
 
 #wrapper{
-	max-width: 900px;
-	margin: 0 auto;
-	background-color: white;
+  max-width: 900px;
+  margin: 0 auto;
+  background-color: white;
 }
 
 header{
-	position: relative;
-	background-color: #f8f8f8;
-	color: #333;
-	font-weight: 400;
-	text-align: center;
-	padding: 10px;
+  position: relative;
+  background-color: #f8f8f8;
+  color: #333;
+  font-weight: 400;
+  text-align: center;
+  padding: 10px;
 }
 header .name{
-	margin: 0;
-	color: black;
-	font-weight: 700;
-	font-size: 250%;
-	line-height: 100%;
+  margin: 0;
+  color: black;
+  font-weight: 700;
+  font-size: 250%;
+  line-height: 100%;
 }
 header .tagline{
-	font-style: italic;
+  font-style: italic;
 }
 header .address,
 header .contact{
-	line-height: 150%;
+  line-height: 150%;
 }
 header .address{
-	position: absolute;
-	left: 10px;
-	text-align: left;
+  position: absolute;
+  left: 10px;
+  text-align: left;
 }
 header .contact{
-	position: absolute;
-	right: 10px;
-	text-align: right;
+  position: absolute;
+  right: 10px;
+  text-align: right;
 }
 
-#content{
-	background-color: white;
-	color: #111;
-	position: relative;
-	font-weight: 300;
-	line-height: 140%;
-	padding: 15px;
+.content{
+  position: relative;
+  line-height: 140%;
+  padding: 15px;
+  float: left;
+  width: 66.5%;
+  box-sizing: border-box;
 }
-#content h3{
-	margin: 0 0 -1em 0;
-	text-decoration: underline;
+.content h3{
+  margin: 0 0 -1em 0;
+  text-decoration: underline;
 }
-#content section{
-	margin: 1.5em 0;
+.content section{
+  margin: 1.5em 0;
 }
-#content section .type{
-	font-size: 125%;
+.content section .type{
+  font-size: 125%;
 }
-#content section .location:before{
-	content: ' - ';
-	color: #111;
+.content section .location:before{
+  content: ' - ';
+  color: #111;
 }
-#content section .location{
-	color: #333;
+.content section .location{
+  color: #333;
 }
-#content section .date{
-	float: right;
+.content section .date{
+  float: right;
 }
-#content section .meta{
-	clear: both;
-	font-style: italic;
-	display: block;
+.content section .meta{
+  clear: both;
+  font-style: italic;
+  display: block;
 }
-#content section ul{
-	margin: .25em 0;
-	padding-left: 1.5em;
+.content section ul{
+  margin: .25em 0;
+  padding-left: 1.5em;
 }
 
 a{
-	color: #333;
-	text-decoration: none;
-	border-bottom: 1px solid rgba(128, 128, 128, .25);
+  color: #333;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(128, 128, 128, .25);
 }
 a:hover{
-	color: #666;
-	border-bottom: 1px solid rgba(128, 128, 128, 1);
+  color: #666;
+  border-bottom: 1px solid rgba(128, 128, 128, 1);
 }
 
 .clear{
-	clear: both;
+  clear: both;
 }
 
 .site-link{
-	display: none;
+  display: none;
 }
 
-#container {  
-  display: grid;
-  grid-template-columns: 0.65fr 0.35fr;
-  grid-template-rows: 1fr;
-  gap: px 0px;
-  grid-auto-flow: row;
-  grid-template-areas:
-    "content sidebar";
+#sidebar .content{
+  float: right;
+  width: 33.5%;
 }
-
-#content { grid-area: content; }
-
-#sidebar { grid-area: sidebar; }
 
 .sidebar-item { 
   padding: 0px;
@@ -134,60 +126,74 @@ a:hover{
   margin-right: 6px;
 }
 
+@media screen and (max-width: 850px){
+  .content{
+    width: 60%;
+  }
+  #sidebar .content{
+    width: 40%;
+  }
+}
 @media screen and (max-width: 700px){
-	header .name{
-		margin-top: 1.25em;
-	}
+  .content, #sidebar .content{
+    float: none;
+    width: 100%;
+  }
 }
 @media screen and (max-width: 500px){
-	#content section .date{
-		display: block;
-		float: unset;
-	}
+  .content section .date{
+    display: block;
+    float: unset;
+  }
 }
 
 @media print{
-	#wrapper{
-		width: 900px;
-	}
-	header{
-		border-bottom: 1px solid black;
-	}
-	.site-link{
-		display: block;
-		color: #666 !important;
-		position: fixed;
-		bottom: 0;
-		right: 0;
-	}
-	a{
-		/* Hide link underlines if printing to paper * /
-		border: none;
-		color: inherit;
-		/**/
-	}
-	#content{
-		padding: 25px 0 .125em 0;
-	}
-	#content section:last{
-		margin-bottom: 0;
-	}
+  body{
+    background: white;
+  }
+  #wrapper{
+    width: 900px;
+  }
+  header{
+    border-bottom: 1px solid black;
+  }
+  .site-link{
+    display: block;
+    color: #666 !important;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+  }
+  a{
+    /* Hide link underlines if printing to paper * /
+    border: none;
+    color: inherit;
+    /**/
+  }
+  .content{
+    padding: 25px 0 .125em 0;
+  }
+  .content section:last{
+    margin-bottom: 0;
+  }
+  #sidebar .content{
+    padding-left: 15px;
+  }
  
-	@page{
-		size: portrait;
-	}
+  @page{
+    size: portrait;
+  }
 
 }
 </style>
-	</head>
+  </head>
 <body>
 <div id="wrapper">
-	<header>
-		<h1 class="name">Adam Ringwood</h1>
-		<div class="tagline">Software Engineer | Security Researcher</div>
-	</header>
-  <div id="container">
-    <div id="content">
+  <header>
+    <h1 class="name">Adam Ringwood</h1>
+    <div class="tagline">Software Engineer | Security Researcher</div>
+  </header>
+    <div class="content">
       <h3>Experience</h3>
       <section>
         <span class="type">Cofounder/CTO</span>
@@ -261,12 +267,9 @@ a:hover{
           </li>
         </ul>
       </section>
-
-      <div class="clear"></div>
-      <div class="site-link">https://ringwood.io/resume.html</div>
     </div>
   <div id="sidebar">
-    <div id="content">
+    <div class="content">
       <h3>Links</h3>
       <section>
         <p class="sidebar-item">Mail: <a class="sidebar-link" href="mailto:job24@ringwood.io">job24@ringwood.io</a></p>
@@ -299,7 +302,9 @@ a:hover{
       </section>
     </div>
   </div>
-  </div>
+  <div class="clear"></div>
+  <div class="site-link">https://ringwood.io/resume.html</div>
 </div>
+<script defer data-domain="ringwood.io" src="https://plausible.io/js/script.js"></script>
 </body>
 </html>
